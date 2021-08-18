@@ -5,10 +5,7 @@ import * as BoonjiashenDotComInfra from '../lib/boonjiashen-dot-com-infra-stack'
 test('Empty Stack', () => {
   const app = new cdk.App();
   // WHEN
-  const stack = new BoonjiashenDotComInfra.BoonjiashenDotComInfraStack(
-    app,
-    'MyTestStack'
-  );
+  const stack = new BoonjiashenDotComInfra.InfraStack(app, 'MyTestStack');
   // THEN
   expectCDK(stack).to(
     matchTemplate(
